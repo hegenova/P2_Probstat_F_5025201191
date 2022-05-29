@@ -34,3 +34,15 @@ x2b <- rnorm(100,23500,3900)
 z.test(x2b, alternative = 'greater', mu = 2300, sigma.x = 3500 )
 #c
 #berdasarkan z.test tersebut, didapatkan bahwa z mencapai nilai diatas 20.000
+#............
+#3
+#a
+#h0: rata-rata saham bandung = rata-rata saham bali
+#h1: rata-rata saham bandung != rata-rata saham bali
+#b
+#kita bisa menggunakan tsum.test(), (https://www.rdocumentation.org/packages/BSDA/versions/1.2.1/topics/tsum.test)
+#untuk menghitung sampel statistik dengan parameter alternative kita jadikan two.side karena dari h0 dan h1, kita berusaha
+#membandingan nilai rata-rata saham bandung dengan bali
+tsum.test(3.64, 1.67, 19, 2.79 , 1.32, 27, alternative = "two.side", var.equal = TRUE)
+#f
+#karena p-value lebih dari 5%, maka tidak signifikan secara statistik, yang menjadikan h0 diterima
