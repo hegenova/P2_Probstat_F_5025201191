@@ -29,7 +29,7 @@ a2
 #kita bisa menggunakan fungsi z.test(),(https://www.rdocumentation.org/packages/BSDA/versions/1.2.1/topics/z.test)
 #untuk mencari mean dari random value yang dibangkitkan dengan fungsi rnorm dengan seed yang di set sebagai 0
 library('BSDA')
-seed(0)
+set.seed(0)
 x2b <- rnorm(100,23500,3900)
 z.test(x2b, alternative = 'greater', mu = 2300, sigma.x = 3500 )
 #c
